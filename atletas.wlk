@@ -24,11 +24,12 @@ object victoria {
     method cambiarDisciplina(nuevaDisciplina){
         disciplina = nuevaDisciplina
     }
+    method elementoIndispensable()= elementoIndispensable
     method cambiarElemento(nuevoElemento){
         elementoIndispensable = nuevoElemento
     }
     method costoElemento() = elementos.costoElemento(self)
-    method presupuestoPropio() = disciplinas.entrenadores() * (comiteOlimpico.costoDeEntrenador() + self.costoElemento() )
+    method presupuestoPropio() = disciplina.entrenadores() * (comiteOlimpico.costoDeEntrenador() + self.costoElemento() )
 
 }
 
