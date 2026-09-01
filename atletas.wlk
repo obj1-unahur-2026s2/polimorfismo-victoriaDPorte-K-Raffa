@@ -12,12 +12,15 @@ object victoria {
     method cambiarCantidadDeInvitados(invitadosFinales){
         cantidadDeInvitados = invitadosFinales 
     }
+    method edad() = edad
     method cumplirAnios(){
         edad =+ 1
     }
+    method altura() = altura
     method cambiarAltura(nuevaAltura){
         altura = nuevaAltura
     }
+    method disciplina() = disciplina
     method cambiarDisciplina(nuevaDisciplina){
         disciplina = nuevaDisciplina
     }
@@ -25,7 +28,7 @@ object victoria {
         elementoIndispensable = nuevoElemento
     }
     method costoElemento() = elementos.costoElemento(self)
-    method presupuestoPropio() =disciplinas.entrenadores() * comiteOlimpico.costoDeEntrenador() + self.costoElemento() 
+    method presupuestoPropio() = disciplinas.entrenadores() * (comiteOlimpico.costoDeEntrenador() + self.costoElemento() )
 
 }
 
